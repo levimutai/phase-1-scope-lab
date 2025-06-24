@@ -1,26 +1,30 @@
 // Write your solution in this file!
-customerName = "bob";
-function upperCaseCustomerName(customerName) {
+// Write your solution in this file!
+
+var customerName = 'bob';
+
+function upperCaseCustomerName() {
   customerName = customerName.toUpperCase();
   return customerName;
 }
+
 function setBestCustomer() {
-   var bestCustomer = "not bob";
+  // bestCustomer is not declared with var, let, or const,
+  // so it becomes a global variable when this function is called.
+  bestCustomer = 'not bob';
   return bestCustomer;
 }
 
 function overwriteBestCustomer() {
-  var bestCustomer = "maybe bob";
+  bestCustomer = 'maybe bob';
   return bestCustomer;
 }
 
-function LeastFavoriteCustomer() {
-  var const leastFavoriteCustomer = "susan";
-  return leastFavoriteCustomer;
-}
+const leastFavoriteCustomer = 'Some initial value';
 
 function changeLeastFavoriteCustomer() {
-   var leastFavoriteCustomer = "sally";
+  // This will cause a TypeError because you cannot reassign a constant variable.
+  leastFavoriteCustomer = 'A new value';
   return leastFavoriteCustomer;
 }
 
